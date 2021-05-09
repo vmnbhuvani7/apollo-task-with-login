@@ -1,0 +1,111 @@
+query user {
+  getAllUser {
+    firstName
+    id
+    userName
+    email
+  }
+}
+query company {
+  getAllCompany {
+    id
+    companyName
+    owner
+  }
+}
+
+query employee {
+  getAllEmployee {
+    id
+    name
+    age
+    post
+    company
+    department
+    salary
+  }
+}
+
+mutation REGISTER_NEW_USER {
+  registerUser(
+    newUser: {
+      firstName: "vmn"
+      lastName: "bhuvani"
+      userName: "vmn123"
+      password: "123123"
+      email: "vmn.bhuvani7@gmail.com"
+    }
+  ) {
+    user {
+      id
+      firstName
+      lastName
+      userName
+      email
+    }
+  }
+}
+
+mutation authenticateUser{
+  authenticateUser(userName: "vmn123", password: "123123") {
+    token
+    user {
+      id
+      firstName
+      lastName
+      userName
+      email 
+    }
+  }
+}
+
+query getUserById {
+  getUserById(id: "6079273523408b0eee2f7274") {
+    id
+    firstName lastName
+  }
+}
+
+query getCompanyById {
+  getCompanyById {
+    companyName
+    owner
+    id
+  }
+}
+
+mutation createNewCompany {
+  createNewCompany(newPost: { companyName: "ScalTeam", location: "surat" }) {
+    id
+    companyName
+    owner
+    location
+  }
+}
+
+mutation createNewEmployee {
+  createNewEmployee(
+    newPost: {
+      name: "vmn"
+      age: 22
+      post: "develpoer"
+      salary: 5
+      department: "employee"
+      company: "607965b2039cda1bf4765378"
+    }
+  ) {
+    id
+    name
+    age
+    post
+    salary
+    department
+    company
+  }
+}
+
+mutation deleteEmployee {
+  deleteEmployee(id:"607958ed81618a19a4f205e3"){
+    id success message
+  }
+}

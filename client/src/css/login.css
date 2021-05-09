@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-signin {
+    width: 500px;
+    padding: 50px 50px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form-emp {
+    padding: 50px 50px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.input-box {
+    margin: 31px auto;
+    width: 80%;
+    border-bottom: 1px solid #000;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.input-box input {
+    width: 90%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000;
+}
+
+ ::placeholder {
+    color: #ccc;
+}
+
+.fa {
+    margin-right: 10px;
+}
